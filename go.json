@@ -1,0 +1,18 @@
+{
+	"api router": {
+		"prefix": "ar",
+		"body": [
+			"// @Title ${1:这个 API 所表达的含义，是一个文本，空格之后的内容全部解析为 title}",
+			"// @Description ${2:这个 API 所表达的含义，是一个文本，空格之后的内容全部解析为 Description}",
+			"// @Success 200 ${3|{object},{array}|} ${4:参数类型，目录.目录.structname 或原生类型 如string}",
+			"// @Param ${5:参数名称} ${6|formData,query,path,body,header|} ${7|string,bool,int,float|}  ${8|false,true|} ${9:参数描述}",
+			"// @Failure ${10:失败的status code} ${11:失败的描述}",
+			"// @router ${12:routerpath} [${13|get,post,put,delete,options,head,patch|}]"
+		],
+		"description": "注释路由描述\r\n 参数类型如果是struct：规则为相对你项目的目录名和对象，例如 models.ZDTProduct.ProductList 就表示 /models/ZDTProduct 目录下的 ProductList 对象"	},
+
+	"api router param": {
+		"prefix": "arp",
+		"body":"// @Param ${1:参数名称} ${2|formData,query,path,body,header|} ${3:参数类型，目录.目录.structname 或原生类型 如string}  ${4|false,true|} ${10:参数描述}",
+		"description": "注释路由 @param 描述\n 参数类型如果是struct：规则为相对你项目的目录名和对象，例如 models.ZDTProduct.ProductList 就表示 /models/ZDTProduct 目录下的 ProductList 对象"	}
+}
